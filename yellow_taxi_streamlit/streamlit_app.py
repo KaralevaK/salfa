@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import joblib
 import numpy as np
 import pandas as pd
@@ -19,9 +21,11 @@ st.set_page_config(
 # Загрузка модели и истории
 # ---------------------------------------------------------
 
+BASE_DIR = Path(__file__).resolve().parent
+
 @st.cache_resource(show_spinner=False)
 def load_model():
-    model_file = open('best_model.pkl', 'rb')
+    model_file = open(BASE_DIR / 'best_model.pkl', 'rb')
     model = joblib.load(model_file)
     return model
 
@@ -29,7 +33,7 @@ def load_model():
 @st.cache_data
 def load_history():
     df = pd.read_csv(
-        "history.csv",
+        BASE_DIR / "history.csv",
         index_col=0,
         parse_dates=True
     )
