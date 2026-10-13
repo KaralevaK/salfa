@@ -1,0 +1,32 @@
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Секреты и локальные настройки
+.env
+.env.*
+secrets.toml
+.streamlit/secrets.toml
+
+# Временные файлы и журналы
+*.log
+*.tmp
+*.temp
+*.bak
+~$*
+Thumbs.db
+.DS_Store
+
+# Архив Stitch
+stitch_yellow_taxi_demand_forecaster.zip
+
+# Вложенные репозитории
+.git/

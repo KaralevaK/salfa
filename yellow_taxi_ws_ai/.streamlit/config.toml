@@ -1,0 +1,9 @@
+# Тема приложения в палитре дизайн-системы (см. константы в app.py).
+# streamlit берёт её в том числе для отрисовки st.dataframe (canvas),
+# поэтому таблица прогноза рисуется на тёмном фоне, а не на белом.
+[theme]
+base = "dark"
+primaryColor = "#FFC72C"
+backgroundColor = "#090D16"
+secondaryBackgroundColor = "#0F172A"
+textColor = "#F8FAFC"
